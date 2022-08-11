@@ -24,11 +24,8 @@
 
 ### ** [Active Storage](https://edgeguides.rubyonrails.org/active_storage_overview.html) **
 
-### ** [PostGres][https://github.com/ged/ruby-pg] ~~ Only In Production ENV ~~
+### ** [PostGres](https://github.com/ged/ruby-pg) ~~ Only In Production ENV ~~
 
 # TODO:
-## - Add Open Source Software License
-## - Add Cloud Providers options
-## - Capistrano / Passenger 
-## - Database encryption
-## - Test ?
+### - Add Open Source Software License
+### - Test ?

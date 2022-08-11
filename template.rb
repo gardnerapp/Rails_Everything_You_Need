@@ -6,16 +6,24 @@ gem 'simple_form'
 gem 'simple_form-tailwind'
 gem 'stripe'
 
-# TODO run installation & generate commands for these gems
-gem 'capistrano', '~> 3.11'
-gem 'capistrano-passenger', '~> 0.2.0'
-gem 'capistrano-rails', '~> 1.4'
-gem 'capistrano-rbenv', '~> 2.1', '>= 2.1.4'
-
 gem_group :production do
   gem 'pg'
 end
 
+if yes?("Install Capistrano ?")
+  cap_installed = true
+  gem 'capistrano', '~> 3.11'
+  gem 'capistrano-passenger', '~> 0.2.0'
+  gem 'capistrano-rails', '~> 1.4'
+  gem 'capistrano-rbenv', '~> 2.1', '>= 2.1.4'
+end
+
+if yes?("Configure Cloud Provider(s) ?")
+  gem("aws-sdk-s3", require: false )if yes?("AWS S3 ?")
+  gem("azure-storage-blob", "~> 2.0", require: false) if yes?("Azure Blobs ?")
+  gem("google-cloud-storage", "~> 1.11", require: false) if yes?("Google Cloud ?")
+  run "echo \"Dont forget to configure your ENV(s)-> config/storage.yml\" "
+end
 
 after_bundle do
   rails_command "tailwindcss:install"
@@ -27,4 +35,6 @@ after_bundle do
   rails_commmand "railg g devise User"
   route "root to: 'users#sign_up'"
   rails_command "db:migrate"
+  run 'cap install STAGES=production' if cap_installed
+  rails_command 'db:encryption:init' if yes?("Active Record Encryption ?")
 end
