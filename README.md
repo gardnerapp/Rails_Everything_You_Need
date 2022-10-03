@@ -26,6 +26,8 @@
 
 ### ** [PostGres](https://github.com/ged/ruby-pg) ~~ Only In Production ENV ~~
 
+### Optional Gems:
+add capistranos / cloud providers       
 # TODO:
 ### - Add Open Source Software License
 ### - Test ?
