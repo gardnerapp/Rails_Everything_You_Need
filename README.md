@@ -32,7 +32,11 @@
 ### ** [FriendlyId](https://github.com/norman/friendly_id/)
 
 ### Optional Gems:
-add capistranos / cloud providers       
-# TODO:
-### - Add cloud provider docs to optional gems
-### - Add Open Source Software License
+
+### ** [Capistrano](https://capistranorb.com/documentation/overview/what-is-capistrano/)
+
+### ** [aws-sdk-s3](https://github.com/aws/aws-sdk-ruby)
+
+### ** [azure-storage-blob](https://github.com/Azure/azure-storage-ruby)
+
+### ** [google-cloud-storage](https://github.com/googleapis/google-cloud-ruby)
