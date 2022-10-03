@@ -32,7 +32,7 @@ after_bundle do
   rails_command "g simple_form:install"
   rails_command "g simple_form:tailwind:install"
   rails_command "active_storage:install"
-  rails_command "railg g devise User"
+  rails_command "rails g devise User"
   route "root to: 'users#sign_up'"
   rails_command "db:migrate"
   run 'cap install STAGES=production' if cap_installed

@@ -6,7 +6,8 @@
 ## Additionally this template will create a Devise User model & set the root of your application to users#sign_up
 
 ## Usage:
-## Simply run `rails new myapp -m https://github.com/gardnerapp/Rails_Everything_You_Need/blob/master/template.rb ` and you'll be on your way. Best of Luck !
+## `git clone https://github.com/gardnerapp/Rails_Everything_You_Need/blob/master/template.rb Rails_Everything_You_Need`
+## Simply run `rails new myapp -m ~/Rails_Everything_You_Need/template.rb` and you'll be on your way. Best of Luck !
 
 ### Included Gems:
 
