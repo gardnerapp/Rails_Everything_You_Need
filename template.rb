@@ -5,6 +5,7 @@ gem 'devise-tailwinded'
 gem 'simple_form'
 gem 'simple_form-tailwind'
 gem 'stripe'
+gem 'friendly_id', '~> 5.4.0'
 
 gem_group :production do
   gem 'pg'
@@ -32,8 +33,7 @@ after_bundle do
   rails_command "g simple_form:install"
   rails_command "g simple_form:tailwind:install"
   rails_command "active_storage:install"
-  rails_command "rails g devise User"
-  route "root to: 'users#sign_up'"
+  rails_command "action_text:install"
   rails_command "db:migrate"
   run 'cap install STAGES=production' if cap_installed
   rails_command 'db:encryption:init' if yes?("Active Record Encryption ?")

@@ -27,8 +27,12 @@
 
 ### ** [PostGres](https://github.com/ged/ruby-pg) ~~ Only In Production ENV ~~
 
+### ** [ActionText](https://edgeguides.rubyonrails.org/action_text_overview.html)
+
+### ** [FriendlyId](https://github.com/norman/friendly_id/)
+
 ### Optional Gems:
 add capistranos / cloud providers       
 # TODO:
+### - Add cloud provider docs to optional gems
 ### - Add Open Source Software License
-### - Test ?
